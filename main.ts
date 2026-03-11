@@ -18,15 +18,22 @@ input.onGesture(Gesture.Shake, function () {
   randomNumber = randint (0,2)
   basic.clearScreen()
 
-  // Show the corresponding icon
+  // if number was 0
   if (randomNumber == 0) {
-  basic.showIcon(IconNames.SmallSquare) 
+  basic.showIcon(IconNames.SmallSquare)
+  basic.showIcon(IconNames.Happy)
   } 
+
+  // if number was 1
   if (randomNumber == 1) {
-  basic.showIcon(IconNames.Square)      
-  } 
+  basic.showIcon(IconNames.Square) 
+  basic.showIcon(IconNames.Happy)     
+  }
+  
+  // if number was 2
   if (randomNumber == 2) {
-  basic.showIcon(IconNames.Scissors)    
+  basic.showIcon(IconNames.Scissors) 
+  basic.showIcon(IconNames.Happy)   
   }
 
   // Hold the icon for 5 seconds (5000 milliseconds)
@@ -40,9 +47,12 @@ input.onButtonPressed(Button.A, function () {
   basic.showIcon(IconNames.Yes)
   basic.pause(1000) 
   basic.clearScreen()
+  basic.showIcon(IconNames.Happy)
 })
 
 // Press B to check your present score
 input.onButtonPressed(Button.B, function () {
   basic.showString('Score:' + score)
+  basic.clearScreen()
+  basic.showIcon(IconNames.Happy)
 })
