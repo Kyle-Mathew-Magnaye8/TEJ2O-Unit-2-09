@@ -39,6 +39,7 @@ input.onGesture(Gesture.Shake, function () {
   // Hold the icon for 5 seconds (5000 milliseconds)
   basic.pause(5000)
   basic.clearScreen()
+  basic.showIcon(IconNames.Happy)
 })
 
 // Press A to increase score
